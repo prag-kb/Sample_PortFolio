@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    width: 100%;
+    position: sticky;
+}
+
+.sidebar{
+    height: fit-content;
+    padding-left: 40px;
+    background-color: #f2f3f7;
+    overflow-y: scroll;
+    line-height: 15px;
+    font-size: 18px;
+}
+
+.text-content{
+    cursor: pointer;
+    display: block;
+}
+
+/* have to check text-content hover activity 18-12-2022 status-pending*/
+
+.text-content::after{
+    /* text-decoration: underline; */
+    color: #2c98f0;
+    /* transition: 0.3s; */
+    content: '';
+    position: absolute;
+    width: 20px;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.text-content:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+.body{
+    background-color: darkgray;
+    width: 100%;
+    height: fit-content;
+    padding-left: 20px;
+}
